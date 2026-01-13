@@ -312,11 +312,20 @@ class UIController {
         const servers = group.servers;
 
         // Calculate aggregate stats
-        const results = servers.map(s => networkTester.getResult(s.id)).filter(r => r);
-        const reachableCount = results.filter(r => r.status === 'reachable').length;
+        // Calculate aggregate stats
+        const results = servers.map(s => ({ server: s, result: networkTester.getResult(s.id) })).filter(item => item.result);
+        const reachableCount = results.filter(item => item.result.status === 'reachable').length;
         const testedCount = results.length;
-        const latencies = results.filter(r => r.latency).map(r => r.latency);
-        const bestPing = latencies.length > 0 ? Math.min(...latencies) : null;
+
+        let bestPing = null;
+        let bestRegion = 'Best';
+
+        const validResults = results.filter(item => item.result.latency !== null);
+        if (validResults.length > 0) {
+            validResults.sort((a, b) => a.result.latency - b.result.latency);
+            bestPing = validResults[0].result.latency;
+            bestRegion = validResults[0].server.region;
+        }
 
         // Determine overall status
         let overallStatus = 'pending';
@@ -349,7 +358,7 @@ class UIController {
                     <div class="game-stats">
                         <div class="game-ping ${bestPing ? NetworkTester.getLatencyQuality(bestPing) : ''}">
                             ${bestPing ? `${bestPing}ms` : '--'}
-                            <span class="ping-label">Best</span>
+                            <span class="ping-label">${bestRegion}</span>
                         </div>
                         <div class="game-status status-${overallStatus}">
                             <span class="status-dot"></span>
