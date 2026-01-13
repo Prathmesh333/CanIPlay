@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Network Feasibility & Latency Analysis Tool - Test game server connectivity and ping from restricted networks">
+    <title>GamePing Checker | Network Latency Analyzer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v6l4 2" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>GAMEPING</h1>
+                    <span class="tagline">Network Reconnaissance System</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="testAllBtn" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                    <span>Initiate Scan</span>
+                </button>
+                <button id="themeToggle" class="btn btn-icon" title="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Stats Overview -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon reachable">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-value" id="reachableCount">0</span>
+                    <span class="stat-label">Online</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon blocked">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+                    </svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-value" id="blockedCount">0</span>
+                    <span class="stat-label">Blocked</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon latency">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                    </svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-value" id="avgLatency">--</span>
+                    <span class="stat-label">Avg Ping</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon total">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" />
+                        <rect x="14" y="3" width="7" height="7" />
+                        <rect x="14" y="14" width="7" height="7" />
+                        <rect x="3" y="14" width="7" height="7" />
+                    </svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-value" id="totalServers">0</span>
+                    <span class="stat-label">Targets</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Region Selector -->
+        <section class="region-section">
+            <div class="section-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+                <span>Select Region</span>
+            </div>
+            <div id="regionTabs" class="region-tabs">
+                <!-- Region buttons will be dynamically inserted -->
+            </div>
+        </section>
+
+        <!-- Add Custom Game Button -->
+        <section class="add-game-section">
+            <button id="addGameBtn" class="btn btn-secondary add-game-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+                Add Custom Game
+            </button>
+            <span class="custom-games-count" id="customGamesCount"></span>
+        </section>
+
+        <!-- Add Game Modal -->
+        <div id="addGameModal" class="modal hidden">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                        Add Custom Game
+                    </h3>
+                    <button id="closeModalBtn" class="modal-close">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18" />
+                            <line x1="6" y1="6" x2="18" y2="18" />
+                        </svg>
+                    </button>
+                </div>
+                <form id="addGameForm" class="add-game-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gameName">Game Name *</label>
+                            <input type="text" id="gameName" placeholder="e.g., My Private Server" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gamePublisher">Publisher</label>
+                            <input type="text" id="gamePublisher" placeholder="e.g., Custom">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Server Locations</label>
+                        <div id="serverLocations" class="server-locations">
+                            <div class="server-location-row">
+                                <input type="text" class="location-region" placeholder="Region (e.g., US East)"
+                                    required>
+                                <input type="text" class="location-url" placeholder="Server URL or IP" required>
+                                <button type="button" class="remove-location-btn" title="Remove">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18" />
+                                        <line x1="6" y1="6" x2="18" y2="18" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" id="addLocationBtn" class="btn-add-location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                            Add Another Region
+                        </button>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="cancelAddGame" class="btn btn-secondary">Cancel</button>
+                        <button type="submit" class="btn btn-primary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Save Game
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <section class="filter-section">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">
+                    All Targets
+                </button>
+                <button class="filter-tab" data-filter="playable">
+                    <span class="status-dot playable"></span>
+                    Online
+                </button>
+                <button class="filter-tab" data-filter="blocked">
+                    <span class="status-dot blocked"></span>
+                    Blocked
+                </button>
+            </div>
+            <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search targets...">
+            </div>
+        </section>
+
+        <!-- Server Grid -->
+        <section class="servers-section">
+            <div id="serversGrid" class="servers-grid">
+                <!-- Server cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Latency Chart Section -->
+        <section class="chart-section">
+            <div class="section-header">
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="20" x2="18" y2="10" />
+                        <line x1="12" y1="20" x2="12" y2="4" />
+                        <line x1="6" y1="20" x2="6" y2="14" />
+                    </svg>
+                    Signal Analysis
+                </h2>
+                <select id="chartServerSelect" class="chart-select">
+                    <option value="">Select target...</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <canvas id="latencyChart"></canvas>
+                <div class="chart-placeholder" id="chartPlaceholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                    </svg>
+                    <p>Select target for signal analysis</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            <strong>⚠ INTEL:</strong> HTTP-based latency reconnaissance. Results may vary from in-game performance due
+            to protocol differences.
+        </p>
+        <p class="copyright">GAMEPING v2.0 // NETWORK RECON SYSTEM // 2026</p>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Scanning network...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/servers.js"></script>
+    <script src="js/tester.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
