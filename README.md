@@ -1,5 +1,7 @@
 # CanIPlay
 
+**Live Demo:** [https://caniplay-web.web.app](https://caniplay-web.web.app)
+
 Test game server connectivity and latency from restricted networks before downloading.
 
 ## Problem
