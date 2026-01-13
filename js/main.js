@@ -11,7 +11,7 @@
     // ===================================
 
     function initTheme() {
-        const savedTheme = localStorage.getItem('gameping-theme');
+        const savedTheme = localStorage.getItem('caniplay-theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
         if (savedTheme) {
@@ -26,7 +26,7 @@
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
         document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('gameping-theme', newTheme);
+        localStorage.setItem('caniplay-theme', newTheme);
     }
 
     // ===================================
@@ -307,14 +307,14 @@
             history[key] = value;
         });
 
-        localStorage.setItem('gameping-results', JSON.stringify(results));
-        localStorage.setItem('gameping-history', JSON.stringify(history));
+        localStorage.setItem('caniplay-results', JSON.stringify(results));
+        localStorage.setItem('caniplay-history', JSON.stringify(history));
     }
 
     function loadResults() {
         try {
-            const resultsStr = localStorage.getItem('gameping-results');
-            const historyStr = localStorage.getItem('gameping-history');
+            const resultsStr = localStorage.getItem('caniplay-results');
+            const historyStr = localStorage.getItem('caniplay-history');
 
             if (resultsStr) {
                 const results = JSON.parse(resultsStr);
@@ -336,7 +336,7 @@
 
     function loadCustomServers() {
         try {
-            const customStr = localStorage.getItem('gameping-custom-servers');
+            const customStr = localStorage.getItem('caniplay-custom-servers');
             if (customStr) {
                 const customServers = JSON.parse(customStr);
                 return customServers;
@@ -349,7 +349,7 @@
 
     function saveCustomServers() {
         const customServers = uiController.servers.filter(s => s.isCustom);
-        localStorage.setItem('gameping-custom-servers', JSON.stringify(customServers));
+        localStorage.setItem('caniplay-custom-servers', JSON.stringify(customServers));
     }
 
     // ===================================
@@ -413,7 +413,7 @@
             saveCustomServers();
         });
 
-        console.log('🎮 GamePing Checker initialized');
+        console.log('CanIPlay initialized');
         console.log(`📡 Loaded ${allServers.length} servers (${customServers.length} custom)`);
     }
 

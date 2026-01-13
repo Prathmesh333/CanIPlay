@@ -2,7 +2,7 @@
 
 ## Adding Game Servers
 
-Edit `js/servers.js` and add entries in this format:
+Edit `js/servers.js`:
 
 ```javascript
 {
@@ -17,17 +17,10 @@ Edit `js/servers.js` and add entries in this format:
 }
 ```
 
-Use favicon URLs or small images for test endpoints.
-
 ## Reporting Issues
 
-Include:
-- Browser and version
-- Steps to reproduce
-- Expected vs actual behavior
+Include browser version, steps to reproduce, and expected vs actual behavior.
 
 ## Code Style
 
-- ES6+ JavaScript
-- Follow existing naming conventions
-- Comment complex logic
+ES6+ JavaScript, follow existing conventions.
