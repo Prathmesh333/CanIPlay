@@ -114,7 +114,7 @@ const GAME_SERVERS = [
         name: 'League of Legends',
         publisher: 'Riot Games',
         region: 'North America',
-        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends/c28f2c`,
+        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends`,
         color: '#c28f2c',
         testEndpoint: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg',
         displayEndpoint: 'Chicago, Illinois'
@@ -124,7 +124,7 @@ const GAME_SERVERS = [
         name: 'League of Legends',
         publisher: 'Riot Games',
         region: 'EU West',
-        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends/c28f2c`,
+        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends`,
         color: '#c28f2c',
         testEndpoint: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg',
         displayEndpoint: 'Amsterdam, Netherlands'
@@ -134,7 +134,7 @@ const GAME_SERVERS = [
         name: 'League of Legends',
         publisher: 'Riot Games',
         region: 'EU Nordic & East',
-        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends/c28f2c`,
+        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends`,
         color: '#c28f2c',
         testEndpoint: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg',
         displayEndpoint: 'Frankfurt, Germany'
@@ -144,7 +144,7 @@ const GAME_SERVERS = [
         name: 'League of Legends',
         publisher: 'Riot Games',
         region: 'Korea',
-        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends/c28f2c`,
+        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends`,
         color: '#c28f2c',
         testEndpoint: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg',
         displayEndpoint: 'Seoul, Korea'
@@ -154,7 +154,7 @@ const GAME_SERVERS = [
         name: 'League of Legends',
         publisher: 'Riot Games',
         region: 'Japan',
-        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends/c28f2c`,
+        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends`,
         color: '#c28f2c',
         testEndpoint: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg',
         displayEndpoint: 'Tokyo, Japan'
@@ -164,7 +164,7 @@ const GAME_SERVERS = [
         name: 'League of Legends',
         publisher: 'Riot Games',
         region: 'Oceania',
-        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends/c28f2c`,
+        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends`,
         color: '#c28f2c',
         testEndpoint: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_0.jpg',
         displayEndpoint: 'Sydney, Australia'
@@ -174,7 +174,7 @@ const GAME_SERVERS = [
         name: 'League of Legends',
         publisher: 'Riot Games',
         region: 'Brazil',
-        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends/c28f2c`,
+        logo: `${SIMPLE_ICONS_CDN}/leagueoflegends`,
         color: '#c28f2c',
         testEndpoint: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_0.jpg',
         displayEndpoint: 'São Paulo, Brazil'
@@ -186,7 +186,7 @@ const GAME_SERVERS = [
         name: 'Counter-Strike 2',
         publisher: 'Valve',
         region: 'US East',
-        logo: `${SIMPLE_ICONS_CDN}/counterstrike/f7a800`,
+        logo: `${SIMPLE_ICONS_CDN}/counterstrike`,
         color: '#f7a800',
         testEndpoint: 'https://www.counter-strike.net/favicon.ico',
         displayEndpoint: 'Virginia, USA'
@@ -196,7 +196,7 @@ const GAME_SERVERS = [
         name: 'Counter-Strike 2',
         publisher: 'Valve',
         region: 'US West',
-        logo: `${SIMPLE_ICONS_CDN}/counterstrike/f7a800`,
+        logo: `${SIMPLE_ICONS_CDN}/counterstrike`,
         color: '#f7a800',
         testEndpoint: 'https://www.counter-strike.net/favicon.ico',
         displayEndpoint: 'Los Angeles, USA'
@@ -206,7 +206,7 @@ const GAME_SERVERS = [
         name: 'Counter-Strike 2',
         publisher: 'Valve',
         region: 'EU West',
-        logo: `${SIMPLE_ICONS_CDN}/counterstrike/f7a800`,
+        logo: `${SIMPLE_ICONS_CDN}/counterstrike`,
         color: '#f7a800',
         testEndpoint: 'https://www.counter-strike.net/favicon.ico',
         displayEndpoint: 'Luxembourg'
@@ -216,7 +216,7 @@ const GAME_SERVERS = [
         name: 'Counter-Strike 2',
         publisher: 'Valve',
         region: 'EU North',
-        logo: `${SIMPLE_ICONS_CDN}/counterstrike/f7a800`,
+        logo: `${SIMPLE_ICONS_CDN}/counterstrike`,
         color: '#f7a800',
         testEndpoint: 'https://www.counter-strike.net/favicon.ico',
         displayEndpoint: 'Stockholm, Sweden'
@@ -226,7 +226,7 @@ const GAME_SERVERS = [
         name: 'Counter-Strike 2',
         publisher: 'Valve',
         region: 'Singapore',
-        logo: `${SIMPLE_ICONS_CDN}/counterstrike/f7a800`,
+        logo: `${SIMPLE_ICONS_CDN}/counterstrike`,
         color: '#f7a800',
         testEndpoint: 'https://www.counter-strike.net/favicon.ico',
         displayEndpoint: 'Singapore'
@@ -236,7 +236,7 @@ const GAME_SERVERS = [
         name: 'Counter-Strike 2',
         publisher: 'Valve',
         region: 'India',
-        logo: `${SIMPLE_ICONS_CDN}/counterstrike/f7a800`,
+        logo: `${SIMPLE_ICONS_CDN}/counterstrike`,
         color: '#f7a800',
         testEndpoint: 'https://www.counter-strike.net/favicon.ico',
         displayEndpoint: 'Mumbai, India'
@@ -246,7 +246,7 @@ const GAME_SERVERS = [
         name: 'Counter-Strike 2',
         publisher: 'Valve',
         region: 'Japan',
-        logo: `${SIMPLE_ICONS_CDN}/counterstrike/f7a800`,
+        logo: `${SIMPLE_ICONS_CDN}/counterstrike`,
         color: '#f7a800',
         testEndpoint: 'https://www.counter-strike.net/favicon.ico',
         displayEndpoint: 'Tokyo, Japan'
@@ -256,7 +256,7 @@ const GAME_SERVERS = [
         name: 'Counter-Strike 2',
         publisher: 'Valve',
         region: 'Brazil',
-        logo: `${SIMPLE_ICONS_CDN}/counterstrike/f7a800`,
+        logo: `${SIMPLE_ICONS_CDN}/counterstrike`,
         color: '#f7a800',
         testEndpoint: 'https://www.counter-strike.net/favicon.ico',
         displayEndpoint: 'São Paulo, Brazil'
@@ -266,7 +266,7 @@ const GAME_SERVERS = [
         name: 'Counter-Strike 2',
         publisher: 'Valve',
         region: 'Australia',
-        logo: `${SIMPLE_ICONS_CDN}/counterstrike/f7a800`,
+        logo: `${SIMPLE_ICONS_CDN}/counterstrike`,
         color: '#f7a800',
         testEndpoint: 'https://www.counter-strike.net/favicon.ico',
         displayEndpoint: 'Sydney, Australia'
@@ -360,7 +360,7 @@ const GAME_SERVERS = [
         name: 'Apex Legends',
         publisher: 'Electronic Arts',
         region: 'US East',
-        logo: `${SIMPLE_ICONS_CDN}/apexlegends/ed1c24`,
+        logo: `${SIMPLE_ICONS_CDN}/apexlegends`,
         color: '#ed1c24',
         testEndpoint: 'https://www.ea.com/favicon.ico',
         displayEndpoint: 'Virginia, USA'
@@ -370,7 +370,7 @@ const GAME_SERVERS = [
         name: 'Apex Legends',
         publisher: 'Electronic Arts',
         region: 'US West',
-        logo: `${SIMPLE_ICONS_CDN}/apexlegends/ed1c24`,
+        logo: `${SIMPLE_ICONS_CDN}/apexlegends`,
         color: '#ed1c24',
         testEndpoint: 'https://www.ea.com/favicon.ico',
         displayEndpoint: 'Oregon, USA'
@@ -380,7 +380,7 @@ const GAME_SERVERS = [
         name: 'Apex Legends',
         publisher: 'Electronic Arts',
         region: 'Europe',
-        logo: `${SIMPLE_ICONS_CDN}/apexlegends/ed1c24`,
+        logo: `${SIMPLE_ICONS_CDN}/apexlegends`,
         color: '#ed1c24',
         testEndpoint: 'https://www.ea.com/favicon.ico',
         displayEndpoint: 'Frankfurt, Germany'
@@ -390,7 +390,7 @@ const GAME_SERVERS = [
         name: 'Apex Legends',
         publisher: 'Electronic Arts',
         region: 'London',
-        logo: `${SIMPLE_ICONS_CDN}/apexlegends/ed1c24`,
+        logo: `${SIMPLE_ICONS_CDN}/apexlegends`,
         color: '#ed1c24',
         testEndpoint: 'https://www.ea.com/favicon.ico',
         displayEndpoint: 'London, UK'
@@ -400,7 +400,7 @@ const GAME_SERVERS = [
         name: 'Apex Legends',
         publisher: 'Electronic Arts',
         region: 'Singapore',
-        logo: `${SIMPLE_ICONS_CDN}/apexlegends/ed1c24`,
+        logo: `${SIMPLE_ICONS_CDN}/apexlegends`,
         color: '#ed1c24',
         testEndpoint: 'https://www.ea.com/favicon.ico',
         displayEndpoint: 'Singapore'
@@ -410,7 +410,7 @@ const GAME_SERVERS = [
         name: 'Apex Legends',
         publisher: 'Electronic Arts',
         region: 'Tokyo',
-        logo: `${SIMPLE_ICONS_CDN}/apexlegends/ed1c24`,
+        logo: `${SIMPLE_ICONS_CDN}/apexlegends`,
         color: '#ed1c24',
         testEndpoint: 'https://www.ea.com/favicon.ico',
         displayEndpoint: 'Tokyo, Japan'
@@ -420,7 +420,7 @@ const GAME_SERVERS = [
         name: 'Apex Legends',
         publisher: 'Electronic Arts',
         region: 'Sydney',
-        logo: `${SIMPLE_ICONS_CDN}/apexlegends/ed1c24`,
+        logo: `${SIMPLE_ICONS_CDN}/apexlegends`,
         color: '#ed1c24',
         testEndpoint: 'https://www.ea.com/favicon.ico',
         displayEndpoint: 'Sydney, Australia'
@@ -430,7 +430,7 @@ const GAME_SERVERS = [
         name: 'Apex Legends',
         publisher: 'Electronic Arts',
         region: 'Brazil',
-        logo: `${SIMPLE_ICONS_CDN}/apexlegends/ed1c24`,
+        logo: `${SIMPLE_ICONS_CDN}/apexlegends`,
         color: '#ed1c24',
         testEndpoint: 'https://www.ea.com/favicon.ico',
         displayEndpoint: 'São Paulo, Brazil'
@@ -442,7 +442,7 @@ const GAME_SERVERS = [
         name: 'Dota 2',
         publisher: 'Valve',
         region: 'US East',
-        logo: `${SIMPLE_ICONS_CDN}/dota2/be1e37`,
+        logo: `${SIMPLE_ICONS_CDN}/dota2`,
         color: '#be1e37',
         testEndpoint: 'https://www.dota2.com/favicon.ico',
         displayEndpoint: 'Virginia, USA'
@@ -452,7 +452,7 @@ const GAME_SERVERS = [
         name: 'Dota 2',
         publisher: 'Valve',
         region: 'US West',
-        logo: `${SIMPLE_ICONS_CDN}/dota2/be1e37`,
+        logo: `${SIMPLE_ICONS_CDN}/dota2`,
         color: '#be1e37',
         testEndpoint: 'https://www.dota2.com/favicon.ico',
         displayEndpoint: 'Washington, USA'
@@ -462,7 +462,7 @@ const GAME_SERVERS = [
         name: 'Dota 2',
         publisher: 'Valve',
         region: 'EU West',
-        logo: `${SIMPLE_ICONS_CDN}/dota2/be1e37`,
+        logo: `${SIMPLE_ICONS_CDN}/dota2`,
         color: '#be1e37',
         testEndpoint: 'https://www.dota2.com/favicon.ico',
         displayEndpoint: 'Luxembourg'
@@ -472,7 +472,7 @@ const GAME_SERVERS = [
         name: 'Dota 2',
         publisher: 'Valve',
         region: 'Russia',
-        logo: `${SIMPLE_ICONS_CDN}/dota2/be1e37`,
+        logo: `${SIMPLE_ICONS_CDN}/dota2`,
         color: '#be1e37',
         testEndpoint: 'https://www.dota2.com/favicon.ico',
         displayEndpoint: 'Stockholm, Sweden'
@@ -482,7 +482,7 @@ const GAME_SERVERS = [
         name: 'Dota 2',
         publisher: 'Valve',
         region: 'Southeast Asia',
-        logo: `${SIMPLE_ICONS_CDN}/dota2/be1e37`,
+        logo: `${SIMPLE_ICONS_CDN}/dota2`,
         color: '#be1e37',
         testEndpoint: 'https://www.dota2.com/favicon.ico',
         displayEndpoint: 'Singapore'
@@ -492,7 +492,7 @@ const GAME_SERVERS = [
         name: 'Dota 2',
         publisher: 'Valve',
         region: 'India',
-        logo: `${SIMPLE_ICONS_CDN}/dota2/be1e37`,
+        logo: `${SIMPLE_ICONS_CDN}/dota2`,
         color: '#be1e37',
         testEndpoint: 'https://www.dota2.com/favicon.ico',
         displayEndpoint: 'Mumbai, India'
@@ -502,7 +502,7 @@ const GAME_SERVERS = [
         name: 'Dota 2',
         publisher: 'Valve',
         region: 'Japan',
-        logo: `${SIMPLE_ICONS_CDN}/dota2/be1e37`,
+        logo: `${SIMPLE_ICONS_CDN}/dota2`,
         color: '#be1e37',
         testEndpoint: 'https://www.dota2.com/favicon.ico',
         displayEndpoint: 'Tokyo, Japan'
@@ -514,7 +514,7 @@ const GAME_SERVERS = [
         name: 'Overwatch 2',
         publisher: 'Blizzard',
         region: 'Americas',
-        logo: `${SIMPLE_ICONS_CDN}/overwatch/f99e1a`,
+        logo: `${SIMPLE_ICONS_CDN}/overwatch`,
         color: '#f99e1a',
         testEndpoint: 'https://overwatch.blizzard.com/favicon.ico',
         displayEndpoint: 'US West'
@@ -524,7 +524,7 @@ const GAME_SERVERS = [
         name: 'Overwatch 2',
         publisher: 'Blizzard',
         region: 'Europe',
-        logo: `${SIMPLE_ICONS_CDN}/overwatch/f99e1a`,
+        logo: `${SIMPLE_ICONS_CDN}/overwatch`,
         color: '#f99e1a',
         testEndpoint: 'https://overwatch.blizzard.com/favicon.ico',
         displayEndpoint: 'Paris, France'
@@ -534,7 +534,7 @@ const GAME_SERVERS = [
         name: 'Overwatch 2',
         publisher: 'Blizzard',
         region: 'Asia',
-        logo: `${SIMPLE_ICONS_CDN}/overwatch/f99e1a`,
+        logo: `${SIMPLE_ICONS_CDN}/overwatch`,
         color: '#f99e1a',
         testEndpoint: 'https://overwatch.blizzard.com/favicon.ico',
         displayEndpoint: 'Seoul, Korea'
@@ -546,7 +546,7 @@ const GAME_SERVERS = [
         name: 'Steam',
         publisher: 'Valve',
         region: 'Global',
-        logo: `${SIMPLE_ICONS_CDN}/steam/1b2838`,
+        logo: `${SIMPLE_ICONS_CDN}/steam`,
         color: '#1b2838',
         testEndpoint: 'https://store.steampowered.com/favicon.ico',
         displayEndpoint: 'store.steampowered.com'
@@ -558,7 +558,7 @@ const GAME_SERVERS = [
         name: 'Battle.net',
         publisher: 'Blizzard',
         region: 'Americas',
-        logo: `${SIMPLE_ICONS_CDN}/battledotnet/00aeff`,
+        logo: `${SIMPLE_ICONS_CDN}/battledotnet`,
         color: '#00aeff',
         testEndpoint: 'https://us.battle.net/favicon.ico',
         displayEndpoint: 'us.battle.net'
@@ -568,7 +568,7 @@ const GAME_SERVERS = [
         name: 'Battle.net',
         publisher: 'Blizzard',
         region: 'Europe',
-        logo: `${SIMPLE_ICONS_CDN}/battledotnet/00aeff`,
+        logo: `${SIMPLE_ICONS_CDN}/battledotnet`,
         color: '#00aeff',
         testEndpoint: 'https://eu.battle.net/favicon.ico',
         displayEndpoint: 'eu.battle.net'
@@ -578,7 +578,7 @@ const GAME_SERVERS = [
         name: 'Epic Games Store',
         publisher: 'Epic Games',
         region: 'Global',
-        logo: `${SIMPLE_ICONS_CDN}/epicgames/313131`,
+        logo: `${SIMPLE_ICONS_CDN}/epicgames`,
         color: '#313131',
         testEndpoint: 'https://store.epicgames.com/favicon.ico',
         displayEndpoint: 'store.epicgames.com'
@@ -588,7 +588,7 @@ const GAME_SERVERS = [
         name: 'Ubisoft Connect',
         publisher: 'Ubisoft',
         region: 'Global',
-        logo: `${SIMPLE_ICONS_CDN}/ubisoft/000`,
+        logo: `${SIMPLE_ICONS_CDN}/ubisoft`,
         color: '#0070ff',
         testEndpoint: 'https://www.ubisoft.com/favicon.ico',
         displayEndpoint: 'connect.ubisoft.com'
@@ -598,7 +598,7 @@ const GAME_SERVERS = [
         name: 'EA App',
         publisher: 'Electronic Arts',
         region: 'Global',
-        logo: `${SIMPLE_ICONS_CDN}/ea/ff4747`,
+        logo: `${SIMPLE_ICONS_CDN}/ea`,
         color: '#ff4747',
         testEndpoint: 'https://www.ea.com/favicon.ico',
         displayEndpoint: 'ea.com'
@@ -610,7 +610,7 @@ const GAME_SERVERS = [
         name: 'Minecraft',
         publisher: 'Mojang',
         region: 'Global',
-        logo: `${SIMPLE_ICONS_CDN}/minecraft/62b47a`,
+        logo: `${SIMPLE_ICONS_CDN}/minecraft`,
         color: '#62b47a',
         testEndpoint: 'https://www.minecraft.net/favicon.ico',
         displayEndpoint: 'minecraft.net'
@@ -620,7 +620,7 @@ const GAME_SERVERS = [
         name: 'Roblox',
         publisher: 'Roblox Corp',
         region: 'Global',
-        logo: `${SIMPLE_ICONS_CDN}/roblox/000`,
+        logo: `${SIMPLE_ICONS_CDN}/roblox`,
         color: '#ff0000',
         testEndpoint: 'https://www.roblox.com/favicon.ico',
         displayEndpoint: 'roblox.com'
@@ -630,7 +630,7 @@ const GAME_SERVERS = [
         name: 'Genshin Impact',
         publisher: 'miHoYo',
         region: 'Asia',
-        logo: `${SIMPLE_ICONS_CDN}/hoyoverse/000`,
+        logo: `${SIMPLE_ICONS_CDN}/hoyoverse`,
         color: '#6fc3df',
         testEndpoint: 'https://genshin.hoyoverse.com/favicon.ico',
         displayEndpoint: 'Asia Server'
@@ -640,7 +640,7 @@ const GAME_SERVERS = [
         name: 'Genshin Impact',
         publisher: 'miHoYo',
         region: 'America',
-        logo: `${SIMPLE_ICONS_CDN}/hoyoverse/000`,
+        logo: `${SIMPLE_ICONS_CDN}/hoyoverse`,
         color: '#6fc3df',
         testEndpoint: 'https://genshin.hoyoverse.com/favicon.ico',
         displayEndpoint: 'America Server'
@@ -650,7 +650,7 @@ const GAME_SERVERS = [
         name: 'Genshin Impact',
         publisher: 'miHoYo',
         region: 'Europe',
-        logo: `${SIMPLE_ICONS_CDN}/hoyoverse/000`,
+        logo: `${SIMPLE_ICONS_CDN}/hoyoverse`,
         color: '#6fc3df',
         testEndpoint: 'https://genshin.hoyoverse.com/favicon.ico',
         displayEndpoint: 'Europe Server'
@@ -662,7 +662,7 @@ const GAME_SERVERS = [
         name: 'Discord',
         publisher: 'Discord Inc',
         region: 'Global',
-        logo: `${SIMPLE_ICONS_CDN}/discord/5865f2`,
+        logo: `${SIMPLE_ICONS_CDN}/discord`,
         color: '#5865f2',
         testEndpoint: 'https://discord.com/assets/favicon.ico',
         displayEndpoint: 'discord.com'
@@ -672,7 +672,7 @@ const GAME_SERVERS = [
         name: 'Xbox Live',
         publisher: 'Microsoft',
         region: 'Global',
-        logo: `${SIMPLE_ICONS_CDN}/xbox/107c10`,
+        logo: `${SIMPLE_ICONS_CDN}/xbox`,
         color: '#107c10',
         testEndpoint: 'https://www.xbox.com/favicon.ico',
         displayEndpoint: 'xbox.com'
@@ -682,7 +682,7 @@ const GAME_SERVERS = [
         name: 'PlayStation Network',
         publisher: 'Sony',
         region: 'Global',
-        logo: `${SIMPLE_ICONS_CDN}/playstation/003791`,
+        logo: `${SIMPLE_ICONS_CDN}/playstation`,
         color: '#003791',
         testEndpoint: 'https://www.playstation.com/favicon.ico',
         displayEndpoint: 'playstation.com'
