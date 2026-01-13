@@ -536,17 +536,25 @@ class UIController {
         const card = document.querySelector(`.game-card[data-game-key="${gameKey}"]`);
         if (!card) return;
 
-        const results = group.servers.map(s => networkTester.getResult(s.id)).filter(r => r);
-        const reachableCount = results.filter(r => r.status === 'reachable').length;
-        const testedCount = results.length;
-        const latencies = results.filter(r => r.latency).map(r => r.latency);
-        const bestPing = latencies.length > 0 ? Math.min(...latencies) : null;
+        // Calculate all results for status
+        const allResults = group.servers.map(s => networkTester.getResult(s.id)).filter(r => r);
+        const reachableCount = allResults.filter(r => r.status === 'reachable').length;
+        const testedCount = allResults.length;
+
+        // Calculate best ping for display
+        const validResults = group.servers
+            .map(s => ({ server: s, result: networkTester.getResult(s.id) }))
+            .filter(item => item.result && item.result.latency !== null);
+
+        validResults.sort((a, b) => a.result.latency - b.result.latency);
+        const bestItem = validResults[0];
 
         // Update best ping
         const pingEl = card.querySelector('.game-ping');
-        if (pingEl && bestPing) {
+        if (pingEl && bestItem) {
+            const bestPing = bestItem.result.latency;
             pingEl.className = `game-ping ${NetworkTester.getLatencyQuality(bestPing)}`;
-            pingEl.innerHTML = `${bestPing}ms<span class="ping-label">Best</span>`;
+            pingEl.innerHTML = `${bestPing}ms<span class="ping-label">${bestItem.server.region}</span>`;
         }
 
         // Update status
