@@ -12,7 +12,7 @@ const GAME_SERVERS = [
         name: 'Valorant',
         publisher: 'Riot Games',
         region: 'Mumbai',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg',
+        logo: `${SIMPLE_ICONS_CDN}/valorant`,
         color: '#ff4655',
         testEndpoint: 'https://playvalorant.com/favicon.ico',
         displayEndpoint: 'Mumbai, India'
@@ -22,7 +22,7 @@ const GAME_SERVERS = [
         name: 'Valorant',
         publisher: 'Riot Games',
         region: 'Singapore',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg',
+        logo: `${SIMPLE_ICONS_CDN}/valorant`,
         color: '#ff4655',
         testEndpoint: 'https://playvalorant.com/favicon.ico',
         displayEndpoint: 'Singapore'
@@ -32,7 +32,7 @@ const GAME_SERVERS = [
         name: 'Valorant',
         publisher: 'Riot Games',
         region: 'Tokyo',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg',
+        logo: `${SIMPLE_ICONS_CDN}/valorant`,
         color: '#ff4655',
         testEndpoint: 'https://playvalorant.com/favicon.ico',
         displayEndpoint: 'Tokyo, Japan'
@@ -42,7 +42,7 @@ const GAME_SERVERS = [
         name: 'Valorant',
         publisher: 'Riot Games',
         region: 'Seoul',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg',
+        logo: `${SIMPLE_ICONS_CDN}/valorant`,
         color: '#ff4655',
         testEndpoint: 'https://playvalorant.com/favicon.ico',
         displayEndpoint: 'Seoul, Korea'
@@ -52,7 +52,7 @@ const GAME_SERVERS = [
         name: 'Valorant',
         publisher: 'Riot Games',
         region: 'Hong Kong',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg',
+        logo: `${SIMPLE_ICONS_CDN}/valorant`,
         color: '#ff4655',
         testEndpoint: 'https://playvalorant.com/favicon.ico',
         displayEndpoint: 'Hong Kong'
@@ -62,7 +62,7 @@ const GAME_SERVERS = [
         name: 'Valorant',
         publisher: 'Riot Games',
         region: 'Frankfurt',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg',
+        logo: `${SIMPLE_ICONS_CDN}/valorant`,
         color: '#ff4655',
         testEndpoint: 'https://playvalorant.com/favicon.ico',
         displayEndpoint: 'Frankfurt, Germany'
@@ -72,7 +72,7 @@ const GAME_SERVERS = [
         name: 'Valorant',
         publisher: 'Riot Games',
         region: 'London',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg',
+        logo: `${SIMPLE_ICONS_CDN}/valorant`,
         color: '#ff4655',
         testEndpoint: 'https://playvalorant.com/favicon.ico',
         displayEndpoint: 'London, UK'
@@ -82,7 +82,7 @@ const GAME_SERVERS = [
         name: 'Valorant',
         publisher: 'Riot Games',
         region: 'Paris',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg',
+        logo: `${SIMPLE_ICONS_CDN}/valorant`,
         color: '#ff4655',
         testEndpoint: 'https://playvalorant.com/favicon.ico',
         displayEndpoint: 'Paris, France'
@@ -92,7 +92,7 @@ const GAME_SERVERS = [
         name: 'Valorant',
         publisher: 'Riot Games',
         region: 'US East',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg',
+        logo: `${SIMPLE_ICONS_CDN}/valorant`,
         color: '#ff4655',
         testEndpoint: 'https://playvalorant.com/favicon.ico',
         displayEndpoint: 'Virginia, USA'
@@ -102,7 +102,7 @@ const GAME_SERVERS = [
         name: 'Valorant',
         publisher: 'Riot Games',
         region: 'US West',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg',
+        logo: `${SIMPLE_ICONS_CDN}/valorant`,
         color: '#ff4655',
         testEndpoint: 'https://playvalorant.com/favicon.ico',
         displayEndpoint: 'Oregon, USA'
@@ -278,7 +278,7 @@ const GAME_SERVERS = [
         name: 'Fortnite',
         publisher: 'Epic Games',
         region: 'NA East',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_letterance_logo.png',
+        logo: `${SIMPLE_ICONS_CDN}/fortnite`,
         color: '#9d4dbb',
         testEndpoint: 'https://www.epicgames.com/favicon.ico',
         displayEndpoint: 'Virginia, USA'
@@ -288,7 +288,7 @@ const GAME_SERVERS = [
         name: 'Fortnite',
         publisher: 'Epic Games',
         region: 'NA West',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_letterance_logo.png',
+        logo: `${SIMPLE_ICONS_CDN}/fortnite`,
         color: '#9d4dbb',
         testEndpoint: 'https://www.epicgames.com/favicon.ico',
         displayEndpoint: 'Oregon, USA'
@@ -298,7 +298,7 @@ const GAME_SERVERS = [
         name: 'Fortnite',
         publisher: 'Epic Games',
         region: 'NA Central',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_letterance_logo.png',
+        logo: `${SIMPLE_ICONS_CDN}/fortnite`,
         color: '#9d4dbb',
         testEndpoint: 'https://www.epicgames.com/favicon.ico',
         displayEndpoint: 'Texas, USA'
@@ -308,7 +308,7 @@ const GAME_SERVERS = [
         name: 'Fortnite',
         publisher: 'Epic Games',
         region: 'Europe',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_letterance_logo.png',
+        logo: `${SIMPLE_ICONS_CDN}/fortnite`,
         color: '#9d4dbb',
         testEndpoint: 'https://www.epicgames.com/favicon.ico',
         displayEndpoint: 'Frankfurt, Germany'
@@ -318,7 +318,7 @@ const GAME_SERVERS = [
         name: 'Fortnite',
         publisher: 'Epic Games',
         region: 'Asia',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_letterance_logo.png',
+        logo: `${SIMPLE_ICONS_CDN}/fortnite`,
         color: '#9d4dbb',
         testEndpoint: 'https://www.epicgames.com/favicon.ico',
         displayEndpoint: 'Tokyo, Japan'
@@ -328,7 +328,7 @@ const GAME_SERVERS = [
         name: 'Fortnite',
         publisher: 'Epic Games',
         region: 'Oceania',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_letterance_logo.png',
+        logo: `${SIMPLE_ICONS_CDN}/fortnite`,
         color: '#9d4dbb',
         testEndpoint: 'https://www.epicgames.com/favicon.ico',
         displayEndpoint: 'Sydney, Australia'
@@ -338,7 +338,7 @@ const GAME_SERVERS = [
         name: 'Fortnite',
         publisher: 'Epic Games',
         region: 'Brazil',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_letterance_logo.png',
+        logo: `${SIMPLE_ICONS_CDN}/fortnite`,
         color: '#9d4dbb',
         testEndpoint: 'https://www.epicgames.com/favicon.ico',
         displayEndpoint: 'São Paulo, Brazil'
@@ -348,7 +348,7 @@ const GAME_SERVERS = [
         name: 'Fortnite',
         publisher: 'Epic Games',
         region: 'Middle East',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_letterance_logo.png',
+        logo: `${SIMPLE_ICONS_CDN}/fortnite`,
         color: '#9d4dbb',
         testEndpoint: 'https://www.epicgames.com/favicon.ico',
         displayEndpoint: 'Bahrain'
