@@ -190,14 +190,16 @@
             <span>Cancel Scan</span>
         `;
 
-        // Run tests on all servers
-        for (const server of uiController.servers) {
-            if (!networkTester.isRunning) break;
-
-            const result = await networkTester.runStabilityTest(server, 3, 300);
-            networkTester.results.set(server.id, result);
-            networkTester.addToHistory(server.id, result);
-        }
+        // Use the built-in testAllServers with progress callback
+        await networkTester.testAllServers(
+            uiController.servers,
+            (serverId, result, completed, total) => {
+                // Update game card stats in real-time
+                uiController.updateGameCardStats(serverId);
+                uiController.updateStats();
+            },
+            true // stability test
+        );
 
         // Reset button
         testAllBtn.innerHTML = `
