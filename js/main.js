@@ -373,50 +373,69 @@
     // ===================================
 
     function init() {
-        // Initialize theme
-        initTheme();
+        try {
+            // Initialize theme
+            initTheme();
 
-        // Load saved data
-        loadResults();
-        const customServers = loadCustomServers();
+            // Load saved data
+            loadResults();
+            const customServers = loadCustomServers();
 
-        // Merge custom servers with default
-        const allServers = [...customServers, ...GAME_SERVERS];
+            // Merge custom servers with default
+            const allServers = [...customServers, ...GAME_SERVERS];
 
-        // Initialize UI
-        uiController.init(allServers);
+            // Initialize UI
+            uiController.init(allServers);
 
-        // Bind event listeners
-        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-        document.getElementById('testAllBtn').addEventListener('click', testAllServers);
+            // Bind event listeners
+            document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+            document.getElementById('testAllBtn').addEventListener('click', testAllServers);
 
-        // Add Game Modal events
-        document.getElementById('addGameBtn').addEventListener('click', openAddGameModal);
-        document.getElementById('closeModalBtn').addEventListener('click', closeAddGameModal);
-        document.getElementById('cancelAddGame').addEventListener('click', closeAddGameModal);
-        document.getElementById('addLocationBtn').addEventListener('click', addLocationRow);
-        document.getElementById('addGameForm').addEventListener('submit', handleAddGameSubmit);
+            // Add Game Modal events
+            document.getElementById('addGameBtn').addEventListener('click', openAddGameModal);
+            document.getElementById('closeModalBtn').addEventListener('click', closeAddGameModal);
+            document.getElementById('cancelAddGame').addEventListener('click', closeAddGameModal);
+            document.getElementById('addLocationBtn').addEventListener('click', addLocationRow);
+            document.getElementById('addGameForm').addEventListener('submit', handleAddGameSubmit);
 
-        // Close modal when clicking overlay
-        document.querySelector('.modal-overlay')?.addEventListener('click', closeAddGameModal);
+            // Close modal when clicking overlay
+            document.querySelector('.modal-overlay')?.addEventListener('click', closeAddGameModal);
 
-        // Bind initial remove buttons
-        bindRemoveLocationButtons();
+            // Bind initial remove buttons
+            bindRemoveLocationButtons();
 
-        // Update custom games count
-        updateCustomGamesCount();
+            // Update custom games count
+            updateCustomGamesCount();
 
-        // Handle window resize for chart
-        window.addEventListener('resize', handleResize);
+            // Handle window resize for chart
+            window.addEventListener('resize', handleResize);
 
-        // Save custom servers when page unloads
-        window.addEventListener('beforeunload', () => {
-            saveResults();
-            saveCustomServers();
-        });
+            // Save custom servers when page unloads
+            window.addEventListener('beforeunload', () => {
+                saveResults();
+                saveCustomServers();
+            });
 
-        console.log('CanIPlay initialized');
-        console.log(`📡 Loaded ${allServers.length} servers (${customServers.length} custom)`);
+            console.log('CanIPlay initialized');
+            console.log(`📡 Loaded ${allServers.length} servers (${customServers.length} custom)`);
+
+            // Remove loading overlay
+            const overlay = document.getElementById('loadingOverlay');
+            if (overlay) {
+                overlay.style.transition = 'opacity 0.5s ease';
+                overlay.style.opacity = '0';
+                setTimeout(() => overlay.remove(), 500);
+            }
+        } catch (error) {
+            console.error('Initialization failed:', error);
+            const overlay = document.getElementById('loadingOverlay');
+            if (overlay) {
+                overlay.innerHTML += `<div style="color: #ff4444; background: rgba(0,0,0,0.8); padding: 20px; text-align: center; margin-top: 20px; border: 1px solid #ff4444; border-radius: 8px;">
+                    <h3>Initialization Error</h3>
+                    <p>${error.message}</p>
+                </div>`;
+            }
+        }
     }
 
     // Run initialization when DOM is ready
